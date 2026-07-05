@@ -330,8 +330,8 @@ img {
 .service-card {
     background: var(--white);
     border: 1px solid var(--border-soft);
-    border-radius: 8px;
-    padding: 36px 30px;
+    border-radius: 10px;
+    padding: 40px 32px;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
  
@@ -341,14 +341,24 @@ img {
 }
  
 .service-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
+    font-size: 1.45rem;
+    margin-bottom: 14px;
+    letter-spacing: 0.01em;
 }
  
 .service-card p {
     font-size: 0.92rem;
     color: var(--text-muted);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+    line-height: 1.65;
+}
+ 
+.service-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 20px !important;
 }
  
 .service-link {
@@ -356,6 +366,12 @@ img {
     font-weight: 700;
     color: var(--accent-dark);
     text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
+}
+ 
+.service-link:hover {
+    color: var(--ink);
 }
  
 /* ============================= */
@@ -598,4 +614,3 @@ img {
         grid-template-columns: 1fr;
     }
 }
- 
