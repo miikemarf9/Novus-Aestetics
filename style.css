@@ -9,14 +9,16 @@
  
 :root {
     --ink: #1a1a1a;
-    --stone: #f7ecea;       /* warm blush-stone, was cool grey */
-    --cream: #fdf8f6;       /* warm ivory, was neutral white */
-    --accent: #a98c6b;      /* warm gold-taupe accent */
+    --stone: #f7ecea;       /* warm blush-stone */
+    --cream: #fdf8f6;       /* warm ivory */
+    --accent: #a98c6b;      /* warm gold-taupe */
     --accent-dark: #8c7255;
-    --blush: #d9a0a0;       /* soft beauty pink accent */
+    --blush: #d9a0a0;       /* soft beauty pink */
     --blush-dark: #c07d7d;
+    --teal: #2aa38f;        /* vibrant pastel teal, echoes logo mark */
+    --teal-dark: #1f8a7a;
     --deep: #3a2a2c;        /* warm deep plum-brown, replaces stark black */
-    --text-muted: #6b6b6b;
+    --text-muted: #7a6a68;
     --border-soft: #ecdfda;
     --white: #ffffff;
 }
@@ -68,7 +70,7 @@ img {
     height: 3px;
     margin: 14px auto 0;
     border-radius: 2px;
-    background: linear-gradient(90deg, var(--blush-dark), var(--accent));
+    background: linear-gradient(90deg, var(--blush-dark), var(--teal), var(--accent));
 }
  
 .section-sub {
@@ -100,52 +102,43 @@ img {
  
 .logo {
     display: inline-flex;
-    flex-direction: column;
     align-items: center;
+    gap: 8px;
     text-decoration: none;
     line-height: 1;
 }
  
-.logo-top {
-    display: inline-flex;
-    align-items: center;
+.logo-novus {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
     font-size: 1.3rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
     color: var(--ink);
-}
- 
-.logo-o {
     display: inline-flex;
-    width: 20px;
-    height: 20px;
-    margin: 0 1px;
-}
- 
-.logo-o svg {
-    width: 100%;
-    height: 100%;
-}
- 
-.logo-bottom {
-    display: flex;
     align-items: center;
-    gap: 8px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 0.55rem;
-    letter-spacing: 0.22em;
-    color: var(--accent-dark);
-    margin-top: 3px;
 }
  
-.logo-bottom i {
+.logo-o-wrap {
+    position: relative;
     display: inline-block;
-    width: 14px;
-    height: 1px;
-    background: var(--accent-dark);
-    font-style: normal;
+}
+ 
+.logo-o-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.62em;
+    height: 0.62em;
+    pointer-events: none;
+}
+ 
+.logo-aesthetics {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.14em;
+    color: var(--accent);
 }
  
 .primary-nav {
@@ -434,7 +427,10 @@ img {
     color: var(--accent-dark);
 }
  
-.trust-item:nth-child(2) .trust-icon,
+.trust-item:nth-child(2) .trust-icon {
+    color: var(--teal-dark);
+}
+ 
 .trust-item:nth-child(4) .trust-icon {
     color: var(--blush-dark);
 }
@@ -474,9 +470,18 @@ img {
 .service-card {
     background: var(--white);
     border: 1px solid var(--border-soft);
+    border-top: 3px solid var(--blush-dark);
     border-radius: 10px;
     padding: 40px 32px;
     transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+ 
+.service-card:nth-child(2) {
+    border-top-color: var(--teal-dark);
+}
+ 
+.service-card:nth-child(3) {
+    border-top-color: var(--accent);
 }
  
 .service-card:hover {
@@ -554,8 +559,9 @@ img {
 }
  
 .about-text em {
-    color: var(--ink);
+    color: var(--teal-dark);
     font-style: italic;
+    font-weight: 600;
 }
  
 /* ============================= */
