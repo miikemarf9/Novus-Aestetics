@@ -440,14 +440,43 @@ img {
 .video-teaser-card {
     background: rgba(255,255,255,0.05);
     border-radius: 8px;
-    padding: 50px 20px;
+    padding: 0;
     border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
 }
  
-.video-placeholder {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    opacity: 0.6;
+.video-thumb {
+    position: relative;
+    aspect-ratio: 16/10;
+    background: rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.play-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--white);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+ 
+.video-teaser-card:hover .play-icon {
+    background: var(--accent);
+    transform: scale(1.08);
+}
+ 
+.video-label {
+    padding: 16px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--white);
 }
  
 /* ============================= */
@@ -539,7 +568,13 @@ img {
 .final-cta h2 {
     font-size: 2.2rem;
     color: var(--white);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+}
+ 
+.final-cta-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
 }
  
 /* ============================= */
@@ -614,3 +649,4 @@ img {
         grid-template-columns: 1fr;
     }
 }
+ 
