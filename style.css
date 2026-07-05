@@ -1,3 +1,4 @@
+
 /* ============================= */
 /* RESET & BASE */
 /* ============================= */
@@ -168,12 +169,26 @@ img {
 /* HERO */
 /* ============================= */
 .hero {
+    position: relative;
     background: var(--stone);
-    padding: 100px 24px 80px;
+    padding: 110px 24px 90px;
     text-align: center;
+    overflow: hidden;
+}
+ 
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(ellipse 60% 50% at 15% 20%, rgba(169, 140, 107, 0.16), transparent 60%),
+        radial-gradient(ellipse 50% 45% at 85% 15%, rgba(169, 140, 107, 0.12), transparent 60%),
+        radial-gradient(ellipse 70% 60% at 50% 100%, rgba(169, 140, 107, 0.10), transparent 65%);
 }
  
 .hero-content {
+    position: relative;
+    z-index: 1;
     max-width: 720px;
     margin: 0 auto;
 }
@@ -212,6 +227,31 @@ img {
     flex-wrap: wrap;
 }
  
+.btn-outline {
+    background: transparent;
+    color: var(--ink);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 1.5px solid var(--ink);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    display: inline-block;
+}
+ 
+.hero-btns .btn-outline:first-child:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--white);
+}
+ 
+.hero-btns .btn-outline:last-child:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--white);
+}
+ 
 .btn-primary {
     background: var(--ink);
     color: var(--white);
@@ -225,23 +265,6 @@ img {
  
 .btn-primary:hover {
     background: var(--accent-dark);
-}
- 
-.btn-ghost {
-    background: transparent;
-    color: var(--ink);
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 14px 28px;
-    border-radius: 4px;
-    text-decoration: none;
-    border: 1.5px solid var(--ink);
-    transition: background 0.2s ease, color 0.2s ease;
-}
- 
-.btn-ghost:hover {
-    background: var(--ink);
-    color: var(--white);
 }
  
 .btn-ghost-dark {
@@ -296,8 +319,15 @@ img {
 }
  
 .trust-icon {
-    font-size: 1.8rem;
-    margin-bottom: 14px;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    color: var(--accent-dark);
+}
+ 
+.trust-icon svg {
+    width: 100%;
+    height: 100%;
 }
  
 .trust-title {
@@ -609,15 +639,30 @@ img {
 .footer-socials {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
     margin-bottom: 24px;
 }
  
-.footer-socials a {
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--white);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+ 
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+}
+ 
+.social-icon:hover {
+    background: var(--accent);
+    border-color: var(--accent);
 }
  
 .footer-copy {
