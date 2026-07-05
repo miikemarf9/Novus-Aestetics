@@ -88,13 +88,14 @@
         <!-- 1. HERO SECTION -->
         <!-- ============================= -->
         <section class="hero" aria-label="Hero Section">
+            <div class="hero-bg"></div>
             <div class="hero-content">
                 <div class="eyebrow">Kennington, Ashford, Kent</div>
                 <h1 class="hero-h1">Advanced Aesthetic Treatments.<br>Safely Delivered.</h1>
                 <p class="hero-sub">Medical-grade Botox, lip fillers, and advanced aesthetic care — delivered with clinical precision and a natural-results philosophy.</p>
                 <div class="hero-btns">
-                    <a href="book.html" class="btn-primary">Book a Consultation</a>
-                    <a href="#treatments" class="btn-ghost">View Treatments</a>
+                    <a href="book.html" class="btn-outline">Book a Consultation</a>
+                    <a href="#treatments" class="btn-outline">View Treatments</a>
                 </div>
             </div>
         </section>
@@ -104,22 +105,42 @@
         <!-- ============================= -->
         <section class="trust-strip" aria-label="Credibility Highlights">
             <div class="trust-item">
-                <div class="trust-icon">🎓</div>
+                <div class="trust-icon">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 6L4 15L24 24L44 15L24 6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M12 19.5V29C12 29 16 34 24 34C32 34 36 29 36 29V19.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M42 15V27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <p class="trust-title">Harley Academy</p>
                 <p class="trust-body">Currently completing Level 7 training — the gold standard in aesthetic medicine.</p>
             </div>
             <div class="trust-item">
-                <div class="trust-icon">🩺</div>
+                <div class="trust-icon">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 6L10 11V22C10 31 15.6 37.8 24 42C32.4 37.8 38 31 38 22V11L24 6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M17 23.5L22 28.5L31.5 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <p class="trust-title">Safety First</p>
                 <p class="trust-body">Medical-grade products and a clinical, consultation-led approach to every treatment.</p>
             </div>
             <div class="trust-item">
-                <div class="trust-icon">📍</div>
+                <div class="trust-icon">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 44C24 44 38 32.5 38 20C38 12.268 31.732 6 24 6C16.268 6 10 12.268 10 20C10 32.5 24 44 24 44Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <circle cx="24" cy="20" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
                 <p class="trust-title">Ashford, Kent</p>
                 <p class="trust-body">Based in Kennington, Ashford — serving clients across Kent.</p>
             </div>
             <div class="trust-item">
-                <div class="trust-icon">✨</div>
+                <div class="trust-icon">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 6L27.5 18.5L40 22L27.5 25.5L24 38L20.5 25.5L8 22L20.5 18.5L24 6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <p class="trust-title">Natural Results</p>
                 <p class="trust-body">Subtle, considered enhancement — never overdone.</p>
             </div>
@@ -283,8 +304,18 @@
             <p class="footer-area">Kennington, Ashford, Kent</p>
             <p class="footer-privacy">Exact clinic address provided upon booking confirmation for client privacy and safety.</p>
             <div class="footer-socials">
-                <a href="https://www.facebook.com/NovusAesthetics.uk" target="_blank" rel="noopener" aria-label="Novus Aesthetics on Facebook">Facebook</a>
-                <a href="https://www.instagram.com/novusaesthetics.uk" target="_blank" rel="noopener" aria-label="Novus Aesthetics on Instagram">Instagram</a>
+                <a href="https://www.facebook.com/NovusAesthetics.uk" target="_blank" rel="noopener" aria-label="Novus Aesthetics on Facebook" class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 8.5H17V5.5H15C13.067 5.5 11.5 7.067 11.5 9V11H9.5V14H11.5V19H14.5V14H16.5L17 11H14.5V9.5C14.5 8.94772 14.9477 8.5 15.5 8.5H15Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/novusaesthetics.uk" target="_blank" rel="noopener" aria-label="Novus Aesthetics on Instagram" class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.4"/>
+                        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/>
+                        <circle cx="17.2" cy="6.8" r="1" fill="currentColor"/>
+                    </svg>
+                </a>
             </div>
             <p class="footer-copy">&copy; 2026 Novus Aesthetics. All rights reserved.</p>
         </div>
@@ -330,3 +361,4 @@
     </script>
 </body>
 </html>
+ 
